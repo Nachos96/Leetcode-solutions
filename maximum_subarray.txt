@@ -1,0 +1,8 @@
+class Solution(object):
+    def maxSubArray(self, nums):
+        curr=0
+        max_till_now=nums[0]
+        for num in nums:
+            curr=max(num, curr+num)
+            max_till_now=max(max_till_now, curr)
+        return max_till_now
